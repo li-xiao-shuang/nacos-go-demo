@@ -14,6 +14,7 @@ func main() {
 		ip := values.Get("ip")
 		port := values.Get("port")
 		pr, _ := strconv.ParseUint(port, 0, 0)
+
 		result := naming.Register(ip, pr)
 		context.JSON(200, gin.H{"message": result})
 
